@@ -1,0 +1,410 @@
+/* Estilos personalizados para IA en Replit */
+
+/* Variables */
+:root {
+  --replit-orange: #F26207;
+  --replit-orange-light: #FF8A3D;
+  --replit-dark: #0E1525;
+  --replit-light: #F5F9FC;
+  --replit-primary: #3485e4;
+  --replit-accent: #FFC107;
+  --claude-purple: #8d69f1;
+  --streamlit-red: #FF4B4B;
+  --github-gray: #24292e;
+}
+
+/* Navbar personalizada */
+.navbar-custom {
+  background-color: var(--replit-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, var(--replit-dark) 0%, #1a2332 100%);
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  color: white;
+}
+
+/* Etiquetas de tecnologías */
+.tech-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.tech-badge img {
+  vertical-align: text-bottom;
+  margin-right: 0.35rem;
+}
+
+.tech-badge.replit {
+  background-color: var(--replit-orange);
+  color: white;
+}
+
+.tech-badge.github {
+  background-color: var(--github-gray);
+  color: white;
+}
+
+.tech-badge.python {
+  background-color: #3776AB;
+  color: white;
+}
+
+.tech-badge.streamlit {
+  background-color: var(--streamlit-red);
+  color: white;
+}
+
+.tech-badge.ai {
+  background-color: var(--claude-purple);
+  color: white;
+}
+
+/* Tarjetas de características */
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--replit-orange);
+}
+
+/* Efectos para imágenes */
+.img-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.img-zoom {
+  transition: transform 0.3s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Animaciones para íconos */
+.animated-icon {
+  transition: all 0.3s ease;
+}
+
+.animated-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Replit section */
+.replit-section {
+  background: linear-gradient(135deg, var(--replit-dark) 0%, #1a2334 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.replit-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(242, 98, 7, 0.2) 0%, rgba(242, 98, 7, 0) 70%);
+  z-index: 0;
+}
+
+/* Footer personalizado */
+.footer {
+  background-color: var(--replit-dark);
+  color: white;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+}
+
+.footer-heading {
+  color: var(--replit-orange);
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--replit-orange);
+  text-decoration: none;
+}
+
+/* Sidebar técnica */
+.tech-sidebar {
+  border-left: 3px solid var(--replit-orange);
+  padding-left: 1.25rem;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tech-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.tech-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--replit-orange);
+}
+
+/* Estilos para el botón de captura de pantalla */
+#screenshotButton {
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+#screenshotButton:hover {
+  background-color: var(--replit-orange);
+  border-color: var(--replit-orange);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#screenshotButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#screenshotButton i {
+  font-size: 0.85rem;
+}
+
+/* Estilos para el toast de notificación */
+.toast {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.toast-header {
+  padding: 0.5rem 1rem;
+}
+
+.toast-body {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  #screenshotButton {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+}
+
+/* Clase personalizada para texto púrpura */
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+/* Estilos para aumentar el contraste y visibilidad de los iconos */
+.fa-2x {
+  font-size: 1.75em !important;
+}
+
+/* Aumentar el tamaño de los emojis */
+.emoji-lg {
+  font-size: 1.3em !important;
+}
+
+/* Añadir algunas sombras de texto para mejor contraste */
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Hacer todos los iconos más grandes */
+.fas {
+  font-size: 1.25em !important;
+}
+
+/* Aumentar aún más el tamaño de los emojis */
+.emoji-lg {
+  font-size: 1.5em !important;
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+
+/* Añadir efecto hover a los emojis grandes */
+.emoji-lg:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Hacer que los iconos en los encabezados sean aún más grandes */
+h1 .fas, h2 .fas, h3 .fas, h4 .fas, h5 .fas {
+  font-size: 1.4em !important;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+/* Mejorar la visualización de los iconos de Font Awesome */
+.card-title .fas,
+.alert .fas,
+.card-header .fas {
+  font-size: 1.5em !important;
+  margin-right: 0.5rem !important;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+/* Añadir un poco de espacio entre los ítems de listas con iconos */
+li .fas {
+  margin-right: 0.5rem !important;
+  vertical-align: middle;
+}
+
+/* Destacar más los iconos en los encabezados de las tablas */
+thead .fas {
+  font-size: 1.6em !important;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+/* Hacer los iconos un poco más grandes en las celdas de la tabla */
+td .fas, th .fas {
+  font-size: 1.3em !important;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* Hacer que los iconos sean más prominentes en el título principal */
+h1 .fas {
+  font-size: 1.7em !important;
+  margin: 0 0.6rem !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+/* Aumentar el efecto visual de los iconos coloreados */
+.text-warning, .text-info, .text-success, .text-primary, .text-danger, .text-purple {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  transition: all 0.2s ease;
+}
+
+/* Efecto hover para todos los íconos coloreados */
+.text-warning:hover, .text-info:hover, .text-success:hover, 
+.text-primary:hover, .text-danger:hover, .text-purple:hover {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Asegurar que todos los iconos tengan transición suave */
+.fas, .far, .fab {
+  transition: all 0.2s ease;
+}
+
+/* Aumentar el efecto visual de los iconos */
+.emoji-lg {
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+
+/* Añadir efecto hover a los emojis grandes */
+.emoji-lg:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Mejorar efecto para iconos con color */
+.text-warning, .text-info, .text-success, 
+.text-primary, .text-danger, .text-purple {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  transition: all 0.2s ease;
+}
+
+/* Efecto hover para todos los íconos coloreados */
+.text-warning:hover, .text-info:hover, .text-success:hover, 
+.text-primary:hover, .text-danger:hover, .text-purple:hover {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Asegurar que todos los iconos tengan transición suave */
+.fas, .far, .fab {
+  transition: all 0.2s ease;
+}
+
+/* Hacer que los iconos en el navbar sean más grandes */
+.navbar-nav .fas, .dropdown-menu .fas {
+  font-size: 1.3em !important;
+  vertical-align: middle;
+}
+
+/* Hacer que los íconos de Claude (robot) y Replit Assistant (code-branch) sean EXTRA grandes */
+.fa-robot, .fa-code-branch {
+  font-size: 2em !important;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+  margin-right: 0.4rem !important;
+  vertical-align: middle;
+  transform-origin: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto hover para los íconos principales */
+.fa-robot:hover, .fa-code-branch:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4));
+}
+
+/* Asegurar que los íconos sean aún más grandes en los títulos principales */
+h1 .fa-robot, h1 .fa-code-branch,
+h2 .fa-robot, h2 .fa-code-branch,
+h3 .fa-robot, h3 .fa-code-branch {
+  font-size: 2.3em !important;
+  margin: 0 0.7rem !important;
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA en Replit - La revolución de la inteligencia artificial</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="logo.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-2" style="padding: 4px; border-radius: 5px;">
+                    <img src="replit-logo-full.png" alt="Replit Logo" width="120" class="replit-logo">
+                </div>
+                <span class="ms-2">IA en Replit</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1 text-warning text-warning"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="claude.html"><i class="fas fa-robot me-1 text-info text-info"></i> Claude Sonnet 3.5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="asistente.html"><i class="fas fa-code-branch me-1 text-success text-success"></i> Asistente de Replit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparacion.html"><i class="fas fa-balance-scale me-1 text-primary text-primary"></i> Comparación</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-qrcode me-1 text-danger text-danger"></i> QRGB
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="codigo.html"><i class="fas fa-code me-1 text-success text-success"></i> Código Fuente</a></li>
+                            <li><a class="dropdown-item" href="version_web.html"><i class="fas fa-globe me-1 text-info text-info"></i> Versión Web</a></li>
+                            <li><a class="dropdown-item" href="qrgb_demo.html"><i class="fas fa-qrcode me-1 text-danger text-danger"></i> Demo QRGB</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://appqrgbpythonappapp-kz8zenrno2ybehz4zgkccc.streamlit.app/" target="_blank"><i class="fas fa-external-link-alt me-1 text-warning text-warning"></i> App Streamlit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recursos.html"><i class="fas fa-book me-1 text-danger text-purple"></i> Recursos</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="screenshotToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <i class="fas fa-check-circle me-2 text-white"></i>
+                <strong class="me-auto">Captura de pantalla</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ¡Captura de pantalla guardada con éxito!
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container py-4 flex-grow-1">
+        <div class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <h1 class="display-4 fw-bold mb-0">Inteligencia Artificial en Replit</h1>
+                        </div>
+                        <p class="lead mb-4">Descubre las poderosas herramientas de IA que Replit ofrece para mejorar tu experiencia de programación y desarrollo web.</p>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                        <div class="position-relative">
+                            <div class="logo-container p-4 mb-4" style="display: inline-block; border-radius: 10px;">
+                                <img src="replit-logo-full.png" alt="Replit Logo" class="img-fluid replit-logo" style="max-width: 400px;">
+                            </div>
+
+                            <div class="mt-4 d-flex justify-content-center gap-4">
+                                <div class="language-icon-container p-3 rounded" style="background-color: #366B98;">
+                                    <i class="fab fa-python fa-3x" style="color: white;"></i>
+                                </div>
+                                <div class="language-icon-container p-3 rounded" style="background-color: #F7DF1E;">
+                                    <i class="fab fa-js fa-3x" style="color: black;"></i>
+                                </div>
+                                <div class="language-icon-container p-3 rounded" style="background-color: #E44D26;">
+                                    <i class="fab fa-html5 fa-3x" style="color: white;"></i>
+                                </div>
+                                <div class="language-icon-container p-3 rounded" style="background-color: #264DE4;">
+                                    <i class="fab fa-css3-alt fa-3x" style="color: white;"></i>
+                                </div>
+                                <div class="language-icon-container p-3 rounded" style="background-color: #181717;">
+                                    <i class="fab fa-github fa-3x" style="color: white;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="logo-container me-3" style="padding: 10px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                <i class="fas fa-user-circle text-primary fs-3"></i>
+                            </span>
+                            <h3 class="card-title mb-0">Acerca del Autor</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="card-text">Esta aplicación web y la herramienta QRGB fueron desarrolladas por <strong>Ibar Federico Anderson, Ph.D., Master, Diseñador Industrial</strong>, con la asistencia de la IA de Replit.</p>
+                                <p>El Dr. Anderson es un investigador y desarrollador que ha utilizado las herramientas de inteligencia artificial de Replit para crear una solución innovadora de códigos QR a color. El código fuente de la aplicación QRGB está disponible para ser ejecutado localmente en Visual Studio Code con Python y Kivy.</p>
+                                <div class="mt-3">
+                                    <a href="https://scholar.google.com/citations?user=mXD4RFUAAAAJ&hl=en" class="btn btn-sm btn-outline-primary me-2" target="_blank">Google Scholar</a>
+                                    <a href="https://orcid.org/0000-0002-9732-3660" class="btn btn-sm btn-outline-primary me-2" target="_blank">ORCID</a>
+                                    <a href="https://www.researchgate.net/profile/Ibar-Anderson" class="btn btn-sm btn-outline-primary me-2" target="_blank">ResearchGate</a>
+                                    <a href="https://github.com/ibarfedericoanderson" class="btn btn-sm btn-primary" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3">
+                                    <img src="Foto_Anderson.jpg" alt="Dr. Ibar Federico Anderson" class="img-fluid rounded-circle shadow mb-3" style="max-width: 200px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row gx-5 mb-5">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-card-header d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <img src="replit-agent-logo-official.png" alt="Replit Agent Logo" width="80" class="img-fluid shadow-sm">
+                            </div>
+                            <h3 class="card-title mb-0">Claude Sonnet 3.5</h3>
+                        </div>
+                        <p class="card-text"><i class="fas fa-robot me-2 text-primary"></i>Claude Sonnet 3.5 es un modelo de lenguaje avanzado de Anthropic disponible en Replit. Ofrece capacidades mejoradas de comprensión y generación de texto, ideal para asistencia de programación, generación de código y explicación de conceptos complejos.</p>
+                        <a href="claude.html" class="btn btn-sm btn-outline-primary">Aprender más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="icon-card-header d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <img src="replit-assistant-logo.jpg" alt="Replit Assistant Logo" width="70" class="img-fluid shadow-sm" style="border-radius: 5px;">
+                            </div>
+                            <h3 class="card-title mb-0">Asistente de Replit</h3>
+                        </div>
+                        <p class="card-text"><i class="fas fa-code-branch me-2 text-success"></i>El Asistente de Replit es una herramienta integrada en el entorno de desarrollo que utiliza IA para ayudarte con tu código. Puede responder preguntas, depurar errores, explicar conceptos y generar código siguiendo tus instrucciones en lenguaje natural.</p>
+                        <a href="asistente.html" class="btn btn-sm btn-outline-success">Aprender más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-5 mb-5 bg-dark rounded-3 shadow">
+            <div class="container-fluid py-3">
+                <h2 class="display-6 fw-bold mb-4">¿Por qué usar IA en Replit?</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="me-3 mt-1">
+                                <span class="logo-container" style="padding: 6px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                    <i class="fas fa-bolt text-warning" style="font-size: 1.2rem;"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5>Acelera tu programación</h5>
+                                <p>Genera código más rápido, obtén sugerencias en tiempo real y mejora tu productividad significativamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="me-3 mt-1">
+                                <span class="logo-container" style="padding: 6px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                    <i class="fas fa-lightbulb text-warning" style="font-size: 1.2rem;"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5>Supera los bloqueos</h5>
+                                <p>Recibe ayuda instantánea cuando te encuentres atascado en un problema o necesites ideas frescas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-start">
+                            <div class="me-3 mt-1">
+                                <span class="logo-container" style="padding: 6px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                    <i class="fas fa-graduation-cap text-warning" style="font-size: 1.2rem;"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <h5>Aprende mientras programas</h5>
+                                <p>Obtén explicaciones detalladas, ejemplos y mejores prácticas para mejorar tus habilidades continuamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="replit-section mb-5">
+            <div class="container-fluid py-3">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="logo-container me-3" style="padding: 8px; border-radius: 8px;">
+                        <img src="replit-logo-full.png" alt="Replit Logo" width="180" class="replit-logo">
+                    </div>
+                    <h2 class="display-6 fw-bold mb-0">Desarrollado con Replit</h2>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="bg-dark bg-opacity-25 p-4 rounded-3 mb-4">
+                            <p class="lead mb-0">Esta aplicación ha sido creada usando las herramientas de desarrollo y la IA de Replit. Tanto el sitio web informativo como la aplicación de códigos QR fueron desarrollados a través de conversaciones iterativas con Claude Sonnet 3.5.</p>
+                        </div>
+
+                        <div class="card border-0 bg-dark bg-opacity-25 mb-4">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <span class="logo-container me-2" style="padding: 6px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                        <i class="fas fa-rocket text-warning"></i>
+                                    </span>
+                                    Beneficios de usar Replit + IA
+                                </h4>
+                                <div class="tech-sidebar mt-3">
+                                    <ul class="tech-list">
+                                        <li>Estructuración inteligente de código Python para la aplicación QRGB</li>
+                                        <li>Diseño de interfaz con Kivy para la versión de escritorio</li>
+                                        <li>Implementación optimizada de algoritmos para manipular capas RGB de QR</li>
+                                        <li>Rendimiento mejorado en aplicaciones web</li>
+                                        <li>Documentación automatizada y ejemplos ilustrativos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <div class="card border-0 shadow">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-center mb-4">
+                                    <img src="images/replit-ai.svg" alt="Replit AI" width="80" class="me-2">
+                                </div>
+                                <h3 class="card-title mb-3">Replit: Tu entorno de desarrollo todo en uno</h3>
+                                <p class="card-text">Replit es una plataforma colaborativa de programación en la nube que combina un editor de código, entorno de ejecución, hospedaje de aplicaciones y herramientas de IA para ayudarte a escribir mejor código más rápidamente.</p>
+
+                                <div class="row g-2 mt-4">
+                                    <div class="col-6">
+                                        <div class="feature-card p-3">
+                                            <div class="mb-2">
+                                                <span class="logo-container" style="padding: 8px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                                    <i class="fas fa-code text-primary feature-icon fs-3"></i>
+                                                </span>
+                                            </div>
+                                            <h5>IDE en la nube</h5>
+                                            <p class="small mb-0">Accede a tu entorno de desarrollo desde cualquier dispositivo</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature-card p-3">
+                                            <div class="mb-2">
+                                                <span class="logo-container" style="padding: 8px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                                    <img src="replit-assistant-logo.jpg" alt="Replit Assistant" width="40" class="img-fluid shadow-sm" style="border-radius: 3px;">
+                                                </span>
+                                            </div>
+                                            <h5>Asistente IA</h5>
+                                            <p class="small mb-0">Potente asistente de IA integrado para ayudarte a programar</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature-card p-3">
+                                            <div class="mb-2">
+                                                <span class="logo-container" style="padding: 8px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                                    <i class="fas fa-globe text-success feature-icon fs-3"></i>
+                                                </span>
+                                            </div>
+                                            <h5>Despliegue</h5>
+                                            <p class="small mb-0">Publica tu aplicación con un click, sin configuraciones</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature-card p-3">
+                                            <div class="mb-2">
+                                                <span class="logo-container" style="padding: 8px; display: inline-block; background-color: #0E1525; border-radius: 8px;">
+                                                    <i class="fas fa-users text-warning feature-icon fs-3"></i>
+                                                </span>
+                                            </div>
+                                            <h5>Colaborativo</h5>
+                                            <p class="small mb-0">Trabaja en equipo en tiempo real desde cualquier lugar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de descargas -->
+        <div class="container my-5">
+            <div class="mt-4 pt-4 border-top border-secondary">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">Descargas disponibles</h3>
+                    <p class="text-muted">Obtén el código fuente completo para ejecutar localmente</p>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-4">
+                        <div class="card bg-dark h-100">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="logo-container p-3" style="display: inline-block; background-color: #0E1525; border-radius: 50%;">
+                                        <i class="fab fa-python fa-2x text-warning"></i>
+                                    </span>
+                                </div>
+                                <h5 class="card-title">QRGB App para Python</h5>
+                                <p class="card-text small">Aplicación de escritorio que utiliza las librerías Pillow, OpenCV y qrcode para generar códigos QR multicapa.</p>
+                                <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-download me-1"></i> Descargar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card bg-dark h-100">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="logo-container p-3" style="display: inline-block; background-color: #0E1525; border-radius: 50%;">
+                                        <i class="fas fa-globe fa-2x text-info"></i>
+                                    </span>
+                                </div>
+                                <h5 class="card-title">Versión Web de QRGB</h5>
+                                <p class="card-text small">Implementación web con HTML, CSS y JavaScript para generar códigos QR multicapa en el navegador.</p>
+                                <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="btn btn-info" target="_blank">
+                                    <i class="fas fa-download me-1"></i> Descargar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card bg-dark h-100">
+                            <div class="card-body text-center">
+                                <div class="mb-3">
+                                    <span class="logo-container p-3" style="display: inline-block; background-color: #0E1525; border-radius: 50%;">
+                                        <i class="fas fa-file-code fa-2x text-success"></i>
+                                    </span>
+                                </div>
+                                <h5 class="card-title">QRGB Script Python</h5>
+                                <p class="card-text small">Script básico de Python que implementa la funcionalidad principal de QRGB para usar en tus propios proyectos.</p>
+                                <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="btn btn-success" target="_blank">
+                                    <i class="fas fa-download me-1"></i> Descargar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="footer-heading">IA en Replit</h4>
+                    <p>Explora las herramientas de inteligencia artificial disponibles en Replit y aprende a integrarlas en tus proyectos de desarrollo.</p>
+                    <div class="d-flex mt-3">
+                        <a href="https://github.com/ibarfedericoanderson" class="me-3 footer-link" target="_blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://replit.com" class="me-3 footer-link" target="_blank">
+                            <div class="logo-container" style="padding: 4px; border-radius: 5px;">
+                                <img src="replit-logo-full.png" alt="Replit" width="80" class="replit-logo">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-link"><i class="fas fa-home me-1 text-warning"></i> Inicio</a></li>
+                        <li class="mb-2"><a href="claude.html" class="footer-link"><i class="fas fa-robot me-1 text-info"></i> Claude Sonnet 3.5</a></li>
+                        <li class="mb-2"><a href="asistente.html" class="footer-link"><i class="fas fa-code-branch me-1 text-success"></i> Asistente de Replit</a></li>
+                        <li class="mb-2"><a href="comparacion.html" class="footer-link"><i class="fas fa-balance-scale me-1 text-primary"></i> Comparación</a></li>
+                        <li class="mb-2"><a href="codigo.html" class="footer-link"><i class="fas fa-qrcode me-1 text-danger"></i> Código QRGB</a></li>
+                        <li class="mb-2"><a href="recursos.html" class="footer-link"><i class="fas fa-book me-1 text-warning"></i> Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Recursos externos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://docs.replit.com/ai" class="footer-link" target="_blank">Documentación de IA en Replit</a></li>
+                        <li class="mb-2"><a href="https://blog.replit.com" class="footer-link" target="_blank">Blog de Replit</a></li>
+                        <li class="mb-2"><a href="https://www.anthropic.com/claude" class="footer-link" target="_blank">Página oficial de Claude</a></li>
+                        <li class="mb-2"><a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="footer-link" target="_blank">Repositorio QRGB</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="footer-heading">Acerca del autor</h5>
+                    <p>Ibar Federico Anderson, Ph.D., Master, Diseñador Industrial</p>
+                    <div class="mt-3">
+                        <a href="https://scholar.google.com/citations?user=mXD4RFUAAAAJ&hl=en" class="btn btn-sm btn-outline-light me-2 mb-2" target="_blank">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-9732-3660" class="btn btn-sm btn-outline-light me-2 mb-2" target="_blank">ORCID</a>
+                        <a href="https://github.com/ibarfedericoanderson" class="btn btn-sm btn-outline-light mb-2" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-3 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023-2025 Proyecto desarrollado con <a href="https://replit.com" class="footer-link" target="_blank">Replit</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="small text-muted mb-0">Potenciado por Claude Sonnet 3.5</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- html2canvas para captura de pantalla -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

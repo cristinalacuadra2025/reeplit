@@ -1,0 +1,168 @@
+/* Estilos personalizados para complementar Bootstrap */
+
+/* Ajustes generales */
+:root {
+  --replit-dark: #0E1525;
+}
+
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--replit-dark) !important;
+  color: white !important;
+}
+
+/* Asegurar que todos los elementos mantengan el fondo oscuro */
+.modal, .card, .card-header, .card-body, .card-footer, 
+.toast, .toast-header, .toast-body, 
+.alert, .accordion, .accordion-item, .accordion-header,
+.list-group, .list-group-item, .dropdown-menu {
+  background-color: var(--replit-dark) !important;
+}
+
+/* Efectos de hover para tarjetas */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Estilo para las secciones de características */
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Mejoras para los acordeones */
+.accordion-button:not(.collapsed) {
+  color: var(--bs-info);
+  background-color: rgba(13, 202, 240, 0.1);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(13, 202, 240, 0.25);
+}
+
+/* Estilo para las tablas */
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 202, 240, 0.1);
+}
+
+/* Estilo para las citas de código */
+code {
+  color: #0dcaf0;
+}
+
+/* Estilo para el resaltado de sintaxis */
+pre {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+
+/* Estilos para badges y etiquetas */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+/* Mejoras para las listas de grupo */
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efectos para botones */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las secciones de resaltado */
+.highlight-section {
+  background: linear-gradient(to right, rgba(13, 110, 253, 0.1), rgba(13, 202, 240, 0.1));
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para las imágenes de perfil */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-primary);
+  color: white;
+  font-weight: bold;
+}
+
+/* Personalización de alertas */
+.alert {
+  border: none;
+  border-left: 4px solid;
+}
+
+.alert-primary {
+  border-left-color: var(--bs-primary);
+}
+
+.alert-success {
+  border-left-color: var(--bs-success);
+}
+
+.alert-info {
+  border-left-color: var(--bs-info);
+}
+
+.alert-warning {
+  border-left-color: var(--bs-warning);
+}
+
+/* Estilo para la navegación activa */
+.nav-link.active {
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-link.active:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bs-primary);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Sonnet 3.5 en Replit</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="logo.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-2" style="padding: 4px; border-radius: 5px;">
+                    <img src="replit-logo-full.png" alt="Replit Logo" width="120" class="replit-logo">
+                </div>
+                <span class="ms-2">IA en Replit</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1 text-warning text-warning"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="claude.html"><i class="fas fa-robot me-1 text-info text-info"></i> Claude Sonnet 3.5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="asistente.html"><i class="fas fa-code-branch me-1 text-success text-success"></i> Asistente de Replit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparacion.html"><i class="fas fa-balance-scale me-1 text-primary text-primary"></i> Comparación</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-qrcode me-1 text-danger text-danger"></i> QRGB
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="codigo.html"><i class="fas fa-code me-1 text-success text-success"></i> Código Fuente</a></li>
+                            <li><a class="dropdown-item" href="version_web.html"><i class="fas fa-globe me-1 text-info text-info"></i> Versión Web</a></li>
+                            <li><a class="dropdown-item" href="qrgb_demo.html"><i class="fas fa-qrcode me-1 text-danger text-danger"></i> Demo QRGB</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://appqrgbpythonappapp-kz8zenrno2ybehz4zgkccc.streamlit.app/" target="_blank"><i class="fas fa-external-link-alt me-1 text-warning text-warning"></i> App Streamlit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recursos.html"><i class="fas fa-book me-1 text-danger text-purple"></i> Recursos</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="screenshotToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <i class="fas fa-check-circle me-2 text-white"></i>
+                <strong class="me-auto">Captura de pantalla</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ¡Captura de pantalla guardada con éxito!
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container py-4 flex-grow-1">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="replit-agent-logo-official.png" alt="Replit Agent / Claude Logo" height="120" class="me-3 img-fluid">
+                        <h1 class="display-4 fw-bold">Claude Sonnet 3.5</h1>
+                    </div>
+                    <p class="lead">Descubre el modelo de lenguaje avanzado de Anthropic integrado directamente en Replit 🚀</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <h2 class="card-title h3 mb-4"><i class="fas fa-robot text-warning me-2"></i> ¿Qué es Claude Sonnet 3.5?</h2>
+                            <p>Claude Sonnet 3.5 es el modelo de inteligencia artificial más reciente de Anthropic, diseñado para ser útil, inofensivo y honesto. Es un asistente de IA de última generación que ofrece respuestas detalladas, precisas y contextuales a una amplia variedad de consultas.</p>
+                            <p>En Replit, Claude Sonnet 3.5 está integrado para ayudarte a programar de manera más eficiente, resolver problemas complejos y aprender nuevos conceptos de programación.</p>
+                            
+                            <div class="alert alert-info mt-4">
+                                <i class="fas fa-info-circle me-2 text-info"></i> Claude Sonnet 3.5 está disponible directamente desde Replit sin necesidad de API keys o configuraciones adicionales.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5 gx-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h4 mb-3"><i class="fas fa-star text-info me-2"></i> Capacidades principales ⭐</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-code text-danger me-2"></i> Generación de código en múltiples lenguajes de programación 💻</li>
+                                <li class="list-group-item"><i class="fas fa-bug text-success me-2"></i> Depuración y corrección de errores en tu código 🐞</li>
+                                <li class="list-group-item"><i class="fas fa-book text-primary me-2"></i> Explicación detallada de conceptos complejos 📚</li>
+                                <li class="list-group-item"><i class="fas fa-tachometer-alt text-warning me-2"></i> Sugerencias para mejorar y optimizar tu código 🚀</li>
+                                <li class="list-group-item"><i class="fas fa-book-open text-info me-2"></i> Respuestas basadas en la documentación técnica actual 📘</li>
+                                <li class="list-group-item"><i class="fas fa-sitemap text-purple me-2"></i> Asistencia en diseño y arquitectura de software 🏗️</li>
+                                <li class="list-group-item"><i class="fas fa-cubes text-warning me-2"></i> Ayuda con algoritmos y estructuras de datos 🧩</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h4 mb-3"><i class="fas fa-tasks text-success me-2"></i> Casos de uso populares 🔍</h3>
+                            <div class="d-flex mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-code text-primary fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="h5">Desarrollo asistido por IA</h4>
+                                    <p class="mb-0">Genera código completo, funciones específicas o scaffolding para tus proyectos en cualquier lenguaje.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-bug text-danger fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="h5">Debugging avanzado</h4>
+                                    <p class="mb-0">Obtén ayuda para identificar y corregir errores en tu código con explicaciones claras.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-3">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-chalkboard-teacher text-success fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="h5">Aprendizaje interactivo</h4>
+                                    <p class="mb-0">Aprende nuevos lenguajes, frameworks o conceptos a través de explicaciones personalizadas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-rocket text-warning fs-4"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="h5">Refactorización y optimización</h4>
+                                    <p class="mb-0">Mejora tu código existente para hacerlo más eficiente, legible y mantenible.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow mb-5">
+                <div class="card-body p-4">
+                    <h2 class="card-title h3 mb-4">Cómo usar Claude Sonnet 3.5 en Replit</h2>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4 class="h5 mb-0"><i class="fas fa-terminal me-2 text-success"></i> Desde cualquier Repl</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ol>
+                                        <li>Abre cualquier Repl en Replit</li>
+                                        <li>Haz clic en el ícono de IA en la barra lateral derecha</li>
+                                        <li>Selecciona "Claude" en el menú desplegable</li>
+                                        <li>Escribe tu pregunta o solicitud</li>
+                                        <li>Recibe respuestas detalladas y código ejecutable</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-header">
+                                    <h4 class="h5 mb-0"><i class="fas fa-keyboard me-2 text-primary"></i> Comandos rápidos</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><i class="fas fa-keyboard text-info me-2"></i> <code>Ctrl + /</code> o <code>Cmd + /</code> - Abre el Asistente de IA directamente ⌨️</li>
+                                        <li><i class="fas fa-question-circle text-warning me-2"></i> <code>/ask</code> - Para preguntar algo a Claude desde el chat 💬</li>
+                                        <li><i class="fas fa-code text-success me-2"></i> <code>/generate</code> - Para generar código específico 🧩</li>
+                                        <li><i class="fas fa-wrench text-danger me-2"></i> <code>/fix</code> - Para corregir problemas en tu código 🔧</li>
+                                        <li><i class="fas fa-book-open text-primary me-2"></i> <code>/explain</code> - Para obtener explicaciones detalladas 📖</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-success">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-lightbulb fs-4 text-warning"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h4 class="h5">Consejo profesional</h4>
+                                <p class="mb-0">Para obtener mejores resultados, sé específico en tus solicitudes. Incluye información sobre el lenguaje de programación, el comportamiento esperado y cualquier restricción importante. Cuanto más contextualices tu pregunta, más útil será la respuesta de Claude.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-dark">
+                            <h3 class="card-title mb-0">Visión General de Claude Sonnet 3.5</h3>
+                        </div>
+                        <div class="card-body bg-dark p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="download.png" alt="Claude Sonnet 3.5" class="img-fluid rounded mb-3">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3">
+                                        <h4 class="mb-3">Características destacadas</h4>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-transparent"><i class="fas fa-language text-info me-2"></i> Procesamiento de lenguaje natural avanzado 🔤</li>
+                                            <li class="list-group-item bg-transparent"><i class="fas fa-code text-danger me-2"></i> Generación de código en múltiples lenguajes 💻</li>
+                                            <li class="list-group-item bg-transparent"><i class="fas fa-brain text-purple me-2"></i> Comprensión de contexto mejorada 🧠</li>
+                                            <li class="list-group-item bg-transparent"><i class="fas fa-check-double text-success me-2"></i> Respuestas precisas y detalladas ✅</li>
+                                            <li class="list-group-item bg-transparent"><i class="fas fa-plug text-warning me-2"></i> Integración nativa con el IDE de Replit 🔌</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row text-center mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="mb-4">¿Listo para empezar?</h2>
+                    <p class="lead mb-4">Experimenta el poder de Claude Sonnet 3.5 en tu próximo proyecto y descubre cómo puede transformar tu proceso de desarrollo.</p>
+                    <a href="https://replit.com" class="btn btn-lg btn-primary" target="_blank">
+                        <i class="fas fa-rocket me-2 text-danger"></i> Ir a Replit
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .chat-message {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .user-message .message-content {
+            background-color: #3485e4;
+            color: white;
+            border-radius: 15px 15px 0 15px;
+            padding: 15px;
+            max-width: 80%;
+            margin-left: auto;
+        }
+
+        .ai-message .message-content {
+            background-color: #2a2d3e;
+            border-radius: 15px 15px 15px 0;
+            padding: 15px;
+            max-width: 100%;
+        }
+
+        .message-content p:last-child {
+            margin-bottom: 0;
+        }
+        </style>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="footer-heading">IA en Replit</h4>
+                    <p>Explora las herramientas de inteligencia artificial disponibles en Replit y aprende a integrarlas en tus proyectos de desarrollo.</p>
+                    <div class="d-flex mt-3">
+                        <a href="https://github.com/ibarfedericoanderson" class="me-3 footer-link" target="_blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://replit.com" class="me-3 footer-link" target="_blank">
+                            <div class="logo-container" style="padding: 4px; border-radius: 5px;">
+                                <img src="replit-logo-full.png" alt="Replit" width="80" class="replit-logo">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-link"><i class="fas fa-home me-1 text-warning"></i> Inicio</a></li>
+                        <li class="mb-2"><a href="claude.html" class="footer-link"><i class="fas fa-robot me-1 text-info"></i> Claude Sonnet 3.5</a></li>
+                        <li class="mb-2"><a href="asistente.html" class="footer-link"><i class="fas fa-code-branch me-1 text-success"></i> Asistente de Replit</a></li>
+                        <li class="mb-2"><a href="comparacion.html" class="footer-link"><i class="fas fa-balance-scale me-1 text-primary"></i> Comparación</a></li>
+                        <li class="mb-2"><a href="codigo.html" class="footer-link"><i class="fas fa-qrcode me-1 text-danger"></i> Código QRGB</a></li>
+                        <li class="mb-2"><a href="recursos.html" class="footer-link"><i class="fas fa-book me-1 text-warning"></i> Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Recursos externos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="https://docs.replit.com/ai" class="footer-link" target="_blank">Documentación de IA en Replit</a></li>
+                        <li class="mb-2"><a href="https://blog.replit.com" class="footer-link" target="_blank">Blog de Replit</a></li>
+                        <li class="mb-2"><a href="https://www.anthropic.com/claude" class="footer-link" target="_blank">Página oficial de Claude</a></li>
+                        <li class="mb-2"><a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="footer-link" target="_blank">Repositorio QRGB</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h5 class="footer-heading">Acerca del autor</h5>
+                    <p>Ibar Federico Anderson, Ph.D., Master, Diseñador Industrial</p>
+                    <div class="mt-3">
+                        <a href="https://scholar.google.com/citations?user=mXD4RFUAAAAJ&hl=en" class="btn btn-sm btn-outline-light me-2 mb-2" target="_blank">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-9732-3660" class="btn btn-sm btn-outline-light me-2 mb-2" target="_blank">ORCID</a>
+                        <a href="https://github.com/ibarfedericoanderson" class="btn btn-sm btn-outline-light mb-2" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-3 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2023-2025 Proyecto desarrollado con <a href="https://replit.com" class="footer-link" target="_blank">Replit</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="small text-muted mb-0">Potenciado por Claude Sonnet 3.5</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- html2canvas para captura de pantalla -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

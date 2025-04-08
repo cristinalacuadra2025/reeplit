@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Replit - Programación con IA</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="logo.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="replit-agent-logo-official.png">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="replit-logo-full.png" alt="Replit" height="30">
+            <span class="ms-2">+</span>
+            <span class="ms-2">Claude IA</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="claude.html">Claude Sonnet 3.5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="asistente.html">Asistente Replit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparacion.html">Comparación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qrgb_demo.html">Demo QRGB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recursos.html">Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="codigo.html">Código</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="version_web.html">Versión Web</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenido principal -->
+<div id="content" class="container py-5">
+    <div class="row mb-5">
+        <div class="col-md-8 mx-auto text-center">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                <img src="replit-assistant-logo.jpg" alt="Replit Assistant" height="120" class="me-3 img-fluid" style="border-radius: 8px;">
+                <h1 class="display-4 fw-bold">Asistente de Replit</h1>
+            </div>
+            <p class="lead">Tu compañero de programación con inteligencia artificial integrado en el IDE de Replit 🚀</p>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-lg-12">
+            <div class="card border-0 shadow">
+                <div class="card-body p-4">
+                    <h2 class="card-title h3 mb-4"><i class="fas fa-code-branch text-success me-2"></i> ¿Qué es el Asistente de Replit?</h2>
+                    <p>El Asistente de Replit es una herramienta de IA integrada directamente en el IDE de Replit que te ayuda a programar de manera más eficiente. A diferencia de Claude, que funciona en un formato de chat, el Asistente está constantemente monitoreando tu código para ofrecerte sugerencias en tiempo real, autocompletar líneas de código y proporcionar ayuda contextual.</p>
+                    
+                    <div class="alert alert-primary mt-4">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-magic fs-4 text-purple"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h4 class="h5">Asistencia proactiva</h4>
+                                <p class="mb-0">El Asistente de Replit anticipa tus necesidades y te ofrece ayuda automáticamente mientras escribes código, sin necesidad de hacer preguntas explícitas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mb-5 gx-4">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title h5 mb-0"><i class="fas fa-code me-2 text-success"></i> Completado de código</h3>
+                </div>
+                <div class="card-body">
+                    <p>El asistente completa automáticamente líneas de código mientras escribes, haciendo sugerencias inteligentes basadas en:</p>
+                    <ul>
+                        <li><i class="fas fa-search text-primary me-2"></i> El contexto actual de tu código 🔍</li>
+                        <li><i class="fas fa-sitemap text-warning me-2"></i> Patrones comunes de programación 🧩</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Mejores prácticas para el lenguaje ✅</li>
+                        <li><i class="fas fa-database text-info me-2"></i> Variables y funciones ya definidas 💾</li>
+                    </ul>
+                    <p class="mb-0 text-muted fst-italic">Simplemente presiona Tab para aceptar la sugerencia o sigue escribiendo para ignorarla.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title h5 mb-0"><i class="fas fa-bug me-2 text-danger"></i> Detección de errores</h3>
+                </div>
+                <div class="card-body">
+                    <p>El asistente identifica proactivamente posibles errores en tu código y te sugiere soluciones:</p>
+                    <ul>
+                        <li><i class="fas fa-code text-danger me-2"></i> Errores de sintaxis ⚠️</li>
+                        <li><i class="fas fa-exchange-alt text-warning me-2"></i> Uso incorrecto de variables 🔄</li>
+                        <li><i class="fas fa-exclamation-triangle text-info me-2"></i> Tipos incompatibles ❗</li>
+                        <li><i class="fas fa-puzzle-piece text-primary me-2"></i> Problemas de lógica comunes 🧩</li>
+                        <li><i class="fas fa-file-import text-success me-2"></i> Importaciones faltantes 📥</li>
+                    </ul>
+                    <p class="mb-0 text-muted fst-italic">Los problemas se subrayan y al hacer hover sobre ellos verás la sugerencia de corrección.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="card-title h5 mb-0 text-white"><i class="fas fa-lightbulb me-2 text-warning"></i> Sugerencias inteligentes</h3>
+                </div>
+                <div class="card-body">
+                    <p>El asistente ofrece recomendaciones para mejorar tu código:</p>
+                    <ul>
+                        <li><i class="fas fa-compress-alt text-success me-2"></i> Simplificación de expresiones 🔄</li>
+                        <li><i class="fas fa-bolt text-warning me-2"></i> Uso de métodos más eficientes ⚡</li>
+                        <li><i class="fas fa-tachometer-alt text-danger me-2"></i> Optimizaciones de rendimiento 🚀</li>
+                        <li><i class="fas fa-glasses text-info me-2"></i> Mejoras en la legibilidad 👓</li>
+                        <li><i class="fas fa-thumbs-up text-primary me-2"></i> Conformidad con estándares del lenguaje ✅</li>
+                    </ul>
+                    <p class="mb-0 text-muted fst-italic">Aparecen como pequeños iconos de bombilla que puedes hacer clic para ver las sugerencias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card border-0 shadow mb-5">
+        <div class="card-body p-4">
+            <h2 class="card-title h3 mb-4"><i class="fas fa-cogs text-warning me-2"></i> Cómo activar y configurar el Asistente ⚙️</h2>
+            
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <div class="card bg-dark mb-4">
+                        <div class="card-header">
+                            <h4 class="h5 mb-0"><i class="fas fa-cog me-2 text-info"></i> Habilitar el Asistente</h4>
+                        </div>
+                        <div class="card-body">
+                            <ol class="list-group list-group-numbered">
+                                <li class="list-group-item bg-transparent"><i class="fas fa-laptop text-primary me-2"></i> Abre cualquier Repl en tu cuenta de Replit 💻</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-tools text-warning me-2"></i> Ve a la pestaña de <strong>Herramientas</strong> en la barra lateral 🔧</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-robot text-info me-2"></i> Busca la sección <strong>"AI"</strong> y haz clic en ella</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-toggle-on text-success me-2"></i> Activa la opción <strong>"Enable AI features"</strong> ✅</li>
+                                <li class="list-group-item bg-transparent"><i class="fas fa-sliders-h text-danger me-2"></i> Configura tus preferencias de completado de código ⚙️</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-dark">
+                        <div class="card-header">
+                            <h4 class="h5 mb-0"><i class="fas fa-keyboard me-2 text-primary"></i> Atajos de teclado</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> <code>Tab</code> - Aceptar sugerencia de completado ✅</li>
+                                <li class="list-group-item"><i class="fas fa-times text-danger me-2"></i> <code>Esc</code> - Rechazar sugerencia de completado ❌</li>
+                                <li class="list-group-item"><i class="fas fa-arrow-right text-primary me-2"></i> <code>Alt + ]</code> - Mostrar siguiente sugerencia ⏩</li>
+                                <li class="list-group-item"><i class="fas fa-arrow-left text-warning me-2"></i> <code>Alt + [</code> - Mostrar sugerencia anterior ⏪</li>
+                                <li class="list-group-item"><i class="fas fa-keyboard text-info me-2"></i> <code>Ctrl + Space</code> - Forzar sugerencias 🔍</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card bg-dark h-100">
+                        <div class="card-header">
+                            <h4 class="h5 mb-0"><i class="fas fa-sliders-h me-2"></i> Personalización</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Puedes personalizar el comportamiento del Asistente de Replit según tus preferencias:</p>
+                            
+                            <div class="mb-3">
+                                <h5 class="h6">Frecuencia de sugerencias</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="suggestionFrequency" id="frequencyHigh" checked>
+                                    <label class="form-check-label" for="frequencyHigh">Alta (sugerencias frecuentes)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="suggestionFrequency" id="frequencyMedium">
+                                    <label class="form-check-label" for="frequencyMedium">Media (equilibrado)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="suggestionFrequency" id="frequencyLow">
+                                    <label class="form-check-label" for="frequencyLow">Baja (sugerencias mínimas)</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h5 class="h6">Tipo de completado</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="completeLines" checked>
+                                    <label class="form-check-label" for="completeLines">Completar líneas enteras</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="completeSnippets" checked>
+                                    <label class="form-check-label" for="completeSnippets">Sugerir snippets de código</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="completeComments" checked>
+                                    <label class="form-check-label" for="completeComments">Completar comentarios</label>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-secondary">
+                                <i class="fas fa-info-circle me-2"></i> Estos controles son ilustrativos. La configuración real se hace dentro del IDE de Replit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-lg-12">
+            <div class="card border-0 shadow-sm overflow-hidden">
+                <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+                    <h3 class="card-title mb-0">El Asistente de Replit</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <img src="asistente.jpg" alt="Asistente de Replit" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="mb-3">Una nueva forma de programar</h4>
+                            <p>El Asistente de Replit revoluciona la manera en que interactúas con tu código. En lugar de simplemente sugerir completados de código como otras herramientas, el Asistente trabaja continuamente a tu lado, comprendiendo el contexto completo de tu proyecto.</p>
+                            
+                            <div class="bg-dark p-3 rounded mb-3">
+                                <h5 class="text-primary"><i class="fas fa-bolt me-2"></i>Características principales</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent"><i class="fas fa-bolt text-warning me-2"></i> Sugerencias en tiempo real mientras escribes ⚡</li>
+                                    <li class="list-group-item bg-transparent"><i class="fas fa-shield-alt text-danger me-2"></i> Detección proactiva de errores antes de ejecutar 🔍</li>
+                                    <li class="list-group-item bg-transparent"><i class="fas fa-magic text-success me-2"></i> Optimizaciones de código personalizadas ✨</li>
+                                    <li class="list-group-item bg-transparent"><i class="fas fa-laptop-code text-info me-2"></i> Interfaz integrada directamente en el editor 💻</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-dark text-muted">
+                    <small>
+                        <i class="fas fa-info-circle me-1"></i> 
+                        Disponible para todos los usuarios de Replit en cada proyecto y en múltiples lenguajes de programación.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-lg-12">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4"><i class="fas fa-handshake text-info me-2"></i> Integración con Claude Sonnet 3.5 🤝</h3>
+                    <p>El Asistente de Replit trabaja en conjunto con Claude Sonnet 3.5, ofreciendo una experiencia de desarrollo asistida por IA completa:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-dark mb-3">
+                                <div class="card-body">
+                                    <h4 class="h5"><i class="fas fa-robot me-2 text-primary"></i> Asistente de Replit</h4>
+                                    <ul class="mb-0">
+                                        <li><i class="fas fa-bolt text-warning me-2"></i> Sugerencias en tiempo real ⚡</li>
+                                        <li><i class="fas fa-code text-success me-2"></i> Completado de código automático 💻</li>
+                                        <li><i class="fas fa-spell-check text-info me-2"></i> Corrección de errores inmediata 🔍</li>
+                                        <li><i class="fas fa-cubes text-primary me-2"></i> Enfocado en tareas de codificación específicas 🧩</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-dark">
+                                <div class="card-body">
+                                    <h4 class="h5"><i class="fas fa-comments me-2 text-success"></i> Claude Sonnet 3.5</h4>
+                                    <ul class="mb-0">
+                                        <li><i class="fas fa-brain text-danger me-2"></i> Conversaciones naturales para planificación 🧠</li>
+                                        <li><i class="fas fa-project-diagram text-primary me-2"></i> Solución de problemas complejos 🔄</li>
+                                        <li><i class="fas fa-file-alt text-success me-2"></i> Generación de documentación detallada 📝</li>
+                                        <li><i class="fas fa-question-circle text-warning me-2"></i> Consultas abiertas sobre temas de programación ❓</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <h3 class="text-center mb-4"><i class="fas fa-rocket me-2 text-danger"></i> ¡Comienza a usar el Asistente ahora!</h3>
+                    <div class="text-center">
+                        <a href="https://replit.com" class="btn btn-primary btn-lg px-4 me-2">
+                            <i class="fas fa-sign-in-alt me-2"></i> Ir a Replit
+                        </a>
+                        <a href="comparacion.html" class="btn btn-outline-dark btn-lg px-4">
+                            <i class="fas fa-balance-scale me-2"></i> Comparar con Claude Sonnet 3.5
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <img src="replit-logo-full.png" alt="Replit" height="30" class="me-3">
+                    <span class="d-inline-block">×</span>
+                    <span class="ms-3">Claude Sonnet 3.5</span>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                    <li class="list-inline-item"><a href="claude.html" class="text-white text-decoration-none">Claude</a></li>
+                    <li class="list-inline-item"><a href="asistente.html" class="text-white text-decoration-none">Asistente</a></li>
+                    <li class="list-inline-item"><a href="comparacion.html" class="text-white text-decoration-none">Comparación</a></li>
+                    <li class="list-inline-item"><a href="recursos.html" class="text-white text-decoration-none">Recursos</a></li>
+                </ul>
+                <p class="small mt-2 mb-0">© 2025 Creado por Federico Anderson con Asistencia de Claude Sonnet 3.5</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="main.js"></script>
+
+</body>
+</html>

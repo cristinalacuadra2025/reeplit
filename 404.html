@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada - QRGB</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="logo.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="replit-agent-logo-official.png">
+    
+    <script>
+        // This script will redirect to the correct HTML page when GitHub Pages serves 404
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the path from the URL
+            var path = window.location.pathname;
+            
+            // Remove leading slash and trailing slash if exists
+            path = path.replace(/^\/|\/$/g, '');
+            
+            // If path is empty, redirect to index.html
+            if (!path) {
+                window.location.replace('/index.html');
+                return;
+            }
+            
+            // Check if path doesn't have .html extension
+            if (!path.endsWith('.html')) {
+                // Redirect to the page with .html extension
+                window.location.replace('/' + path + '.html');
+            }
+        });
+    </script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="container text-center my-5">
+        <h1 class="display-1 text-danger"><i class="fas fa-exclamation-triangle"></i></h1>
+        <h2 class="my-4">Página no encontrada</h2>
+        <p class="lead">La página que estás buscando no existe o ha sido movida.</p>
+        <a href="index.html" class="btn btn-primary mt-3"><i class="fas fa-home me-2"></i>Volver al inicio</a>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 QRGB - Desarrollado con <i class="fas fa-heart text-danger"></i> por Federico Anderson</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://replit.com" class="text-white me-3"><i class="fas fa-code"></i> Replit</a>
+                    <a href="https://anthropic.com" class="text-white"><i class="fas fa-robot"></i> Claude</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
